@@ -453,6 +453,11 @@
   .vcard__icon { width: 44px; height: 44px; border-radius: 12px; }
   .vcard__icon svg { width: 22px; height: 22px; }
   .vcard__ticket-end { display: none; }
+  .vcard__art {
+    width: 130px; height: 130px;
+    right: -6px; bottom: 48px;
+    opacity: 0.13;
+  }
 }
 
 @media (max-width: 380px) {
