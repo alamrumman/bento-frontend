@@ -28,7 +28,7 @@ const back = (t) => {
  *  0.66 - 0.82   vegetables cascade in
  *  0.82 - 1.00   box flattens to top-down + nutrition tally
  */
-export default function BentoBox({ progress = 0, label = "Maru bento, animated" }) {
+export default function BentoBox({ progress = 0, label = "マル弁当、アニメーション" }) {
   const p = clamp(progress);
 
   const lidLift = smooth(mapRange(p, 0.1, 0.3));
@@ -46,17 +46,17 @@ export default function BentoBox({ progress = 0, label = "Maru bento, animated" 
   const labels = useMemo(() => {
     const entries = [
       {
-        id: 1, name: "PROTEIN", t: c1, hint: "Salmon · 32g",
+        id: 1, name: "たんぱく質", t: c1, hint: "鮭 · 32g",
         iso:  { left: -2, top: 12, rot: -4 },
         flat: { left: -4, top: 42, rot: 0 },
       },
       {
-        id: 2, name: "GRAINS", t: c2, hint: "Sesame rice · 48g",
+        id: 2, name: "主食", t: c2, hint: "ごまご飯 · 48g",
         iso:  { left: 80, top: 8,  rot:  4 },
         flat: { left: 82, top: 10, rot:  0 },
       },
       {
-        id: 3, name: "VEG / PICKLE", t: c3, hint: "Cucumber · ume",
+        id: 3, name: "野菜・漬物", t: c3, hint: "きゅうり · 梅",
         iso:  { left: -2, top: 62, rot: -4 },
         flat: { left: 82, top: 68, rot:  0 },
       },
@@ -443,19 +443,19 @@ export default function BentoBox({ progress = 0, label = "Maru bento, animated" 
            overlaps them. */}
         <div className="bento__tally" aria-hidden="true">
           <div className="tally__row">
-            <span className="tally__k">PROTEIN</span>
+            <span className="tally__k">たんぱく質</span>
             <span className="tally__v">32g</span>
           </div>
           <div className="tally__row">
-            <span className="tally__k">CARBS</span>
+            <span className="tally__k">炭水化物</span>
             <span className="tally__v">48g</span>
           </div>
           <div className="tally__row">
-            <span className="tally__k">FIBER</span>
+            <span className="tally__k">食物繊維</span>
             <span className="tally__v">9g</span>
           </div>
           <div className="tally__row tally__row--total">
-            <span className="tally__k">TOTAL</span>
+            <span className="tally__k">合計</span>
             <span className="tally__v">540 kcal</span>
           </div>
         </div>

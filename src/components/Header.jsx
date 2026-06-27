@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="container site-header__bar">
-        <Link to="/" className="brand" aria-label={`${siteConfig.brand.name} — home`}>
+        <Link to="/" className="brand" aria-label={`${siteConfig.brand.name} ― ホーム`}>
           <span className="brand__kanji" aria-hidden="true">{siteConfig.brand.kanji}</span>
           <span className="brand__word">{siteConfig.brand.name}</span>
         </Link>
@@ -28,7 +28,7 @@ export default function Header() {
         </nav>
 
         <a className="btn btn-primary header-cta" href={`mailto:${siteConfig.contact.email}`}>
-          Order a box
+          ご注文
         </a>
       </div>
     </header>

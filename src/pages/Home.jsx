@@ -5,35 +5,35 @@ import "./home.css";
 
 const BEATS = [
   {
-    eyebrow: "01 · introducing maru",
-    title: ["Your meal,", "divided."],
+    eyebrow: "01 · マルのはじまり",
+    title: ["ひと食を、", "きちんと分けて。"],
     body:
-      "Maru bento boxes start as a single, balanced idea — then we draw the lines that make every portion deliberate.",
+      "マルの弁当は、ひとつのバランスから始まります。そこに線を引き、ひとつひとつの分量に意味を持たせる。",
   },
   {
-    eyebrow: "02 · open the lid",
-    title: ["A meal you", "can read."],
-    body: "Each compartment is labeled, weighed, and named. No guessing, no mixing, no mystery dressing pooled at the bottom.",
+    eyebrow: "02 · 蓋を開ける",
+    title: ["読める、", "ひと食。"],
+    body: "すべての仕切りに名前と重さがあります。曖昧さも、混ざりも、底に溜まる謎のソースも、ありません。",
   },
   {
-    eyebrow: "03 · protein",
-    title: ["Salmon", "teriyaki."],
-    body: "Wild-caught, glazed with shio-koji and tamari. 32 g of protein, portioned for one.",
+    eyebrow: "03 · たんぱく質",
+    title: ["鮭の", "照り焼き。"],
+    body: "天然ものに、塩麹とたまり醤油で照りを纏わせる。たんぱく質32g、おひとり分の設計。",
   },
   {
-    eyebrow: "04 · grains",
-    title: ["Short-grain", "sesame rice."],
-    body: "Steamed with kombu, finished with toasted sesame. Carbohydrates that earn their place in the box.",
+    eyebrow: "04 · 主食",
+    title: ["短粒の", "ごまご飯。"],
+    body: "昆布で炊いて、炒り胡麻で仕上げる。箱の中に居る価値のある、炭水化物です。",
   },
   {
-    eyebrow: "05 · vegetables & pickle",
-    title: ["Cucumber", "and ume."],
-    body: "Salt-cured cucumber and house-pickled plum — acidity, crunch, and the small jolt that ties the meal together.",
+    eyebrow: "05 · 野菜と漬物",
+    title: ["きゅうりと、", "梅。"],
+    body: "塩漬けのきゅうりと、自家製の梅干し。酸味、食感、そして食事全体をまとめる小さな刺激。",
   },
   {
-    eyebrow: "06 · the whole",
-    title: ["丸 — round,", "whole, complete."],
-    body: "Three compartments. One balanced meal. Built once, served the way it was designed.",
+    eyebrow: "06 · 全体",
+    title: ["丸 ― まるく、", "整い、完全に。"],
+    body: "三つの仕切り。ひとつのバランスのとれた食事。設計通りに、一度だけ組み立てる。",
   },
 ];
 
@@ -99,7 +99,7 @@ export default function Home() {
       <section
         ref={trackRef}
         className={"scroll-story" + (reduced ? " is-reduced" : "")}
-        aria-label="Maru bento — opening sequence"
+        aria-label="マル弁当 ― 開封のシークエンス"
       >
         {reduced ? (
           <ReducedHero />
@@ -107,7 +107,7 @@ export default function Home() {
           <div className="scroll-stage">
             <div className="container scroll-grid">
               <div className="copy">
-                <span className="pill"><span className="dot" />a balanced bento, by design</span>
+                <span className="pill"><span className="dot" />設計された、バランスの弁当</span>
                 {BEATS.map((b, i) => (
                   <div
                     key={i}
@@ -125,8 +125,8 @@ export default function Home() {
                 ))}
 
                 <div className="cta-row">
-                  <a className="btn btn-primary" href="#compartments">See what's inside</a>
-                  <Link className="btn btn-ghost" to="/about">Our story</Link>
+                  <a className="btn btn-primary" href="#compartments">中身を見る</a>
+                  <Link className="btn btn-ghost" to="/about">私たちの物語</Link>
                 </div>
 
                 <ScrollProgress p={progress} />
@@ -143,31 +143,31 @@ export default function Home() {
       {/* ---------- COMPARTMENTS / VALUE PROPS ---------- */}
       <section id="compartments" className="section">
         <div className="container">
-          <span className="eyebrow">the compartments</span>
-          <h2 className="h2 section-h">Three parts. One whole.</h2>
+          <span className="eyebrow">仕切りについて</span>
+          <h2 className="h2 section-h">三つの部分。ひとつの全体。</h2>
           <p className="lede section-lede">
-            Bento isn't a salad bowl with extra steps. It's a discipline — dividing a meal so each
-            element keeps its texture, temperature, and intent.
+            弁当は、サラダボウルの手の込んだ版ではありません。食材の食感、温度、意図を保つために
+            食事を分ける ― それが、規律です。
           </p>
 
           <ul className="compartments">
             <li className="compartment">
-              <span className="compartment__tag">protein</span>
-              <h3 className="h3">Glazed, never drowned.</h3>
-              <p>Sealed in its own quadrant so the soy doesn't run into your rice.</p>
-              <span className="compartment__nutri">32g protein · 240 kcal</span>
+              <span className="compartment__tag">たんぱく質</span>
+              <h3 className="h3">照りを纏う、溺れない。</h3>
+              <p>醤油がご飯に流れないよう、独自の区画で封じ込める。</p>
+              <span className="compartment__nutri">たんぱく質 32g · 240 kcal</span>
             </li>
             <li className="compartment">
-              <span className="compartment__tag">grains</span>
-              <h3 className="h3">Rice with a backbone.</h3>
-              <p>Short-grain rice steamed with kombu and finished with toasted sesame.</p>
-              <span className="compartment__nutri">48g carbs · 220 kcal</span>
+              <span className="compartment__tag">主食</span>
+              <h3 className="h3">芯のある、ご飯。</h3>
+              <p>昆布で炊いた短粒米を、炒り胡麻で仕上げる。</p>
+              <span className="compartment__nutri">炭水化物 48g · 220 kcal</span>
             </li>
             <li className="compartment">
-              <span className="compartment__tag">veg / pickle</span>
-              <h3 className="h3">Bright on purpose.</h3>
-              <p>Salt-cured cucumber and ume to reset your palate between bites.</p>
-              <span className="compartment__nutri">9g fiber · 80 kcal</span>
+              <span className="compartment__tag">野菜・漬物</span>
+              <h3 className="h3">あえての、鮮やかさ。</h3>
+              <p>塩漬けきゅうりと梅で、ひと口の合間に味覚をリセット。</p>
+              <span className="compartment__nutri">食物繊維 9g · 80 kcal</span>
             </li>
           </ul>
         </div>
@@ -177,20 +177,20 @@ export default function Home() {
       <section className="section section--inset">
         <div className="container brand-story">
           <div>
-            <span className="eyebrow">the maru idea</span>
-            <h2 className="h2">A circle is a constraint.</h2>
+            <span className="eyebrow">マルの思想</span>
+            <h2 className="h2">円は、制約である。</h2>
           </div>
           <div className="prose">
             <p>
-              Maru — 丸 — means whole, complete, rounded off. Not because a meal should be
-              everything, but because what's in the box should be enough.
+              マル ― 丸 ― は、全体、完成、丸みを帯びた、という意味です。食事がすべてを
+              含むべきだから、ではありません。箱の中身が十分であればいい、それだけです。
             </p>
             <p>
-              We start with three lines drawn in a tray, then we cook to fit. No filler. No
-              upsell. No optional dressing sachet you'll throw away.
+              私たちはまず、トレイに三本の線を引きます。それから、それに合わせて料理する。
+              詰め物なし。押し売りなし。捨てる運命のドレッシング袋もなし。
             </p>
             <p>
-              The box is the brief. The brief is the meal.
+              箱が、指示書。指示書が、食事。
             </p>
           </div>
         </div>
@@ -200,11 +200,11 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <div className="values-head">
-            <span className="eyebrow">how we work</span>
-            <h2 className="h2">Four rules. One box.</h2>
+            <span className="eyebrow">私たちの働き方</span>
+            <h2 className="h2">四つの規律。ひとつの箱。</h2>
             <p className="lede values-head__lede">
-              Four quiet disciplines that show up in every Maru bento — the things you taste
-              before you can name them.
+              すべてのマル弁当に現れる、四つの静かな規律 ―
+              名前を付ける前に、味で気づくもの。
             </p>
           </div>
           <ValuesCarousel />
@@ -313,8 +313,8 @@ const ArtClock = () => (
     <path d="M28 56 Q34 46, 44 50 Q50 42, 58 50 Q66 56, 56 60 L34 60 Q22 60, 28 56 Z"
           strokeWidth="1.1" />
     {/* time hint */}
-    <text x="106" y="20" fontFamily="monospace" fontSize="8"
-          fill="currentColor" stroke="none" letterSpacing="2" opacity="0.85">05:00</text>
+    <text x="98" y="20" fontFamily="monospace" fontSize="8"
+          fill="currentColor" stroke="none" letterSpacing="2" opacity="0.85">朝 05:00</text>
   </svg>
 );
 
@@ -369,8 +369,8 @@ const ArtNoFiller = () => (
       <line x1="138" y1="56" x2="110" y2="106" />
     </g>
     {/* label ribbon */}
-    <text x="58" y="32" fontFamily="monospace" fontSize="9"
-          fill="currentColor" stroke="none" letterSpacing="3" opacity="0.85">ENOUGH</text>
+    <text x="62" y="32" fontFamily="serif" fontSize="14"
+          fill="currentColor" stroke="none" letterSpacing="4" opacity="0.85">これで足る</text>
   </svg>
 );
 
@@ -381,45 +381,45 @@ function ValuesCarousel() {
   const items = useMemo(
     () => [
       {
-        k: "Portioned",
-        v: "Every gram weighed, every compartment labeled. Bento ergonomics before flavor.",
+        k: "適量",
+        v: "すべてのグラムを計り、すべての仕切りに名前を。味の前に、まず弁当の使い心地を。",
         bullets: [
-          "Three compartments, three measured weights",
-          "Sealed, never mixed in transit",
-          "Same brief, every box",
+          "三つの仕切り、三つの計量",
+          "密封され、配送中に混ざらない",
+          "同じ仕様書、すべての箱に",
         ],
         icon: <IconPortion />,
         art:  <ArtPortion />,
       },
       {
-        k: "Cooked daily",
-        v: "Made in the morning, delivered chilled, eaten same-day. Never reheated yesterday.",
+        k: "毎日調理",
+        v: "朝に作り、冷蔵で届け、その日のうちに食べる。昨日の温め直しは、ありません。",
         bullets: [
-          "Prep begins at 5 am sharp",
-          "Boxes leave the kitchen by 10 am",
-          "Eaten same day — no exceptions",
+          "仕込みは朝五時きっかりに開始",
+          "箱は午前十時までに厨房を出る",
+          "その日のうちに ― 例外なく",
         ],
         icon: <IconClock />,
         art:  <ArtClock />,
       },
       {
-        k: "Recycled inside-out",
-        v: "The lacquered tray returns on your next delivery — it never sees a landfill.",
+        k: "内も外も再利用",
+        v: "漆塗りのトレイは、次の配送便で回収します。埋立地に行くことは、ありません。",
         bullets: [
-          "Lacquered, dishwasher-safe tray",
-          "Collected on your next delivery loop",
-          "Zero single-use packaging in the box",
+          "漆塗り、食洗機対応のトレイ",
+          "次回の配送便で回収",
+          "箱の中に使い捨て包装は一切なし",
         ],
         icon: <IconRecycle />,
         art:  <ArtRecycle />,
       },
       {
-        k: "No filler",
-        v: "If an ingredient isn't earning its compartment, it isn't in the box.",
+        k: "詰め物なし",
+        v: "自分の仕切りに値しない食材は、箱に入れません。",
         bullets: [
-          "Every ingredient weighed and named",
-          "One menu a day, made well",
-          "No filler greens, no upsell sachets",
+          "すべての食材に、重さと名前を",
+          "一日、一献立、丁寧に",
+          "詰め物の葉物なし、押し売りの袋なし",
         ],
         icon: <IconNoFiller />,
         art:  <ArtNoFiller />,
@@ -457,7 +457,7 @@ function ValuesCarousel() {
         </span>
         <span className="vcar__state">
           <span className="vcar__pulse" />
-          {paused ? "Paused" : "Auto · 3.5s"}
+          {paused ? "一時停止" : "自動 · 3.5秒"}
         </span>
       </div>
 
@@ -479,7 +479,7 @@ function ValuesCarousel() {
               <div className="vcard__top">
                 <div className="vcard__icon">{it.icon}</div>
                 <span className="vcard__no">
-                  Rule {String(i + 1).padStart(2, "0")} / {String(n).padStart(2, "0")}
+                  規律 {String(i + 1).padStart(2, "0")} / {String(n).padStart(2, "0")}
                 </span>
               </div>
               <h3 className="vcard__title">{it.k}</h3>
@@ -491,15 +491,15 @@ function ValuesCarousel() {
               </ul>
               <div className="vcard__ticket">
                 <span className="vcard__dash" />
-                MARU · QUALITY RULE
-                <span className="vcard__ticket-end">No. {String(i + 1).padStart(3, "0")}</span>
+                マル · 品質規律
+                <span className="vcard__ticket-end">第 {String(i + 1).padStart(3, "0")} 号</span>
               </div>
             </article>
           ))}
         </div>
       </div>
 
-      <nav className="vcar__nav" aria-label="Choose a rule">
+      <nav className="vcar__nav" aria-label="規律を選ぶ">
         {items.map((it, i) => (
           <button
             key={it.k}
@@ -531,19 +531,19 @@ function ReducedHero() {
   return (
     <div className="container reduced-hero">
       <div>
-        <span className="pill"><span className="dot" />a balanced bento, by design</span>
-        <span className="eyebrow">introducing maru</span>
+        <span className="pill"><span className="dot" />設計された、バランスの弁当</span>
+        <span className="eyebrow">マルのはじまり</span>
         <h1 className="display hero-title">
-          <span className="hero-line">Your meal,</span>
-          <span className="hero-line">divided.</span>
+          <span className="hero-line">ひと食を、</span>
+          <span className="hero-line">きちんと分けて。</span>
         </h1>
         <p className="lede">
-          Three compartments. One balanced meal. Protein, grains, vegetables — portioned,
-          labeled, and built to be eaten the way it was designed.
+          三つの仕切り。ひとつのバランスのとれた食事。たんぱく質、主食、野菜 ―
+          計量され、名付けられ、設計通りに食べられるよう組み立てられた。
         </p>
         <div className="cta-row">
-          <a className="btn btn-primary" href="#compartments">See what's inside</a>
-          <Link className="btn btn-ghost" to="/about">Our story</Link>
+          <a className="btn btn-primary" href="#compartments">中身を見る</a>
+          <Link className="btn btn-ghost" to="/about">私たちの物語</Link>
         </div>
       </div>
       <div className="stage">

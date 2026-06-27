@@ -3,35 +3,35 @@ import { siteConfig } from "../config/siteConfig.js";
 import "./legal.css";
 
 const SECTIONS = [
-  { id: "acceptance", title: "Acceptance of terms" },
-  { id: "use", title: "Use of the site" },
-  { id: "ip", title: "Intellectual property" },
-  { id: "thirdparty", title: "Third-party links" },
-  { id: "disclaimers", title: "Disclaimers" },
-  { id: "liability", title: "Limitation of liability" },
-  { id: "changes", title: "Changes" },
-  { id: "contact", title: "Contact" },
+  { id: "acceptance", title: "規約への同意" },
+  { id: "use", title: "サイトの利用" },
+  { id: "ip", title: "知的財産" },
+  { id: "thirdparty", title: "第三者リンク" },
+  { id: "disclaimers", title: "免責事項" },
+  { id: "liability", title: "責任の制限" },
+  { id: "changes", title: "規約の変更" },
+  { id: "contact", title: "お問い合わせ" },
 ];
 
 export default function Terms() {
   useEffect(() => {
-    document.title = `Terms & Conditions — ${siteConfig.brand.name}`;
+    document.title = `利用規約 ― ${siteConfig.brand.name}`;
   }, []);
 
   return (
     <article className="legal">
       <div className="legal__container">
         <header className="legal__header">
-          <span className="eyebrow">legal</span>
-          <h1 className="legal__title">Terms &amp; Conditions</h1>
+          <span className="eyebrow">法務</span>
+          <h1 className="legal__title">利用規約</h1>
           <div className="legal__meta">
-            <span>Last updated: {siteConfig.legal.lastUpdated}</span>
+            <span>最終更新: {siteConfig.legal.lastUpdated}</span>
             <span>{siteConfig.legal.entityName}</span>
           </div>
         </header>
 
-        <nav className="legal__toc" aria-label="Sections">
-          <h2>Sections</h2>
+        <nav className="legal__toc" aria-label="目次">
+          <h2>目次</h2>
           <ol>
             {SECTIONS.map((s) => (
               <li key={s.id}><a href={`#${s.id}`}>{s.title}</a></li>
@@ -40,81 +40,83 @@ export default function Terms() {
         </nav>
 
         <section id="acceptance">
-          <h3>1. Acceptance of terms</h3>
+          <h3>1. 規約への同意</h3>
           <p>
-            By accessing or using the {siteConfig.brand.name} website, you agree to be bound by
-            these Terms &amp; Conditions. If you do not agree, please do not use the site.
+            {siteConfig.brand.name}のウェブサイトにアクセスし、または利用することにより、
+            お客様は本利用規約に拘束されることに同意するものとします。同意いただけない
+            場合は、当サイトのご利用をお控えください。
           </p>
         </section>
 
         <section id="use">
-          <h3>2. Use of the site</h3>
+          <h3>2. サイトの利用</h3>
           <p>
-            This site is provided for informational purposes about the {siteConfig.brand.name}
-            {" "}brand and our bento offering. You may browse it freely for personal,
-            non-commercial use. You agree not to attempt to disrupt the site's operation,
-            scrape it at unreasonable rates, or use it in any way that violates applicable law.
+            当サイトは、{siteConfig.brand.name}ブランドおよび当社の弁当製品に関する情報
+            提供を目的としています。個人的かつ非商業的な目的で自由に閲覧いただけます。
+            サイトの運営を妨げる行為、過度な頻度でのスクレイピング、適用法に違反する
+            利用は禁止されています。
           </p>
         </section>
 
         <section id="ip">
-          <h3>3. Intellectual property</h3>
+          <h3>3. 知的財産</h3>
           <p>
-            All content on this site — including the {siteConfig.brand.name} name, marks,
-            illustrations, written copy, and design — is owned by{" "}
-            {siteConfig.legal.entityName} or its licensors. You may not reproduce, distribute, or
-            create derivative works from this content without our prior written permission.
+            当サイトのすべてのコンテンツ ―{siteConfig.brand.name}の名称、商標、イラスト、
+            コピー、デザインを含む ― は、{siteConfig.legal.entityName}またはそのライセンサーに
+            帰属します。事前の書面による許可なく、これらのコンテンツを複製、配布、または
+            派生物の作成を行うことはできません。
           </p>
         </section>
 
         <section id="thirdparty">
-          <h3>4. Third-party links</h3>
+          <h3>4. 第三者リンク</h3>
           <p>
-            The site may link to third-party websites (for example, social media or font
-            providers). We do not control those sites and are not responsible for their content,
-            policies, or practices.
+            当サイトは、第三者のウェブサイト(ソーシャルメディアやフォントプロバイダー等)
+            にリンクする場合があります。当社はそれらのサイトを管理しておらず、コンテンツ、
+            ポリシー、運用について責任を負いません。
           </p>
         </section>
 
         <section id="disclaimers">
-          <h3>5. Disclaimers</h3>
+          <h3>5. 免責事項</h3>
           <p>
-            The site is provided "as is" and "as available", without warranties of any kind,
-            either express or implied, including but not limited to implied warranties of
-            merchantability, fitness for a particular purpose, or non-infringement.
+            当サイトは「現状有姿」かつ「提供可能な範囲」で提供されます。商品性、特定目的
+            への適合性、非侵害性を含む(ただしこれらに限らない)明示または黙示の一切の
+            保証を行いません。
           </p>
         </section>
 
         <section id="liability">
-          <h3>6. Limitation of liability</h3>
+          <h3>6. 責任の制限</h3>
           <p>
-            To the maximum extent permitted by applicable law, {siteConfig.legal.entityName}{" "}
-            will not be liable for any indirect, incidental, special, consequential, or punitive
-            damages arising out of or related to your use of, or inability to use, the site.
+            適用法により認められる最大限の範囲において、{siteConfig.legal.entityName}は、
+            お客様のサイト利用または利用不能に起因または関連して生じた間接的、付随的、
+            特別的、結果的、懲罰的損害について、一切責任を負いません。
           </p>
         </section>
 
         <section id="changes">
-          <h3>7. Changes</h3>
+          <h3>7. 規約の変更</h3>
           <p>
-            We may update these terms from time to time. The "Last updated" date above will
-            change whenever we publish a revised version. Continued use of the site after a
-            change constitutes acceptance of the updated terms.
+            当社は、本規約を随時更新することがあります。改訂版を公開した場合、上記の
+            「最終更新」日付が変更されます。変更後も継続して当サイトをご利用いただくことは、
+            更新された規約への同意とみなされます。
           </p>
         </section>
 
         <section id="contact">
-          <h3>8. Contact</h3>
+          <h3>8. お問い合わせ</h3>
           <p>
-            Questions about these terms can be sent to{" "}
-            <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>.
+            本規約に関するご質問は、
+            <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a> までお送り
+            ください。
           </p>
         </section>
 
         <p className="legal__note">
-          These terms are a plain-language template for a small static marketing site without
-          transactional features. They are not a substitute for legal review by counsel in your
-          jurisdiction.
+          本規約は、取引機能を持たない小規模な静的マーケティングサイト向けの平易な
+          テンプレートです。お住まいの管轄区域における弁護士による法的レビューに代わる
+          ものではありません。
         </p>
       </div>
     </article>

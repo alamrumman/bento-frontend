@@ -16,30 +16,30 @@ export default function Footer() {
         </div>
 
         <div className="site-footer__col">
-          <h4 className="site-footer__h">Site</h4>
+          <h4 className="site-footer__h">サイト</h4>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
+            <li><Link to="/">ホーム</Link></li>
+            <li><Link to="/about">マルについて</Link></li>
           </ul>
         </div>
 
         <div className="site-footer__col">
-          <h4 className="site-footer__h">Legal</h4>
+          <h4 className="site-footer__h">規約</h4>
           <ul>
-            <li><Link to="/privacy">Privacy Policy</Link></li>
-            <li><Link to="/terms">Terms &amp; Conditions</Link></li>
+            <li><Link to="/privacy">プライバシーポリシー</Link></li>
+            <li><Link to="/terms">利用規約</Link></li>
           </ul>
         </div>
 
         <div className="site-footer__col">
-          <h4 className="site-footer__h">Contact</h4>
+          <h4 className="site-footer__h">お問い合わせ</h4>
           <ul>
             <li>
               <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>
             </li>
             <li>
               <a href={siteConfig.social.instagram} target="_blank" rel="noreferrer noopener">
-                Instagram
+                インスタグラム
               </a>
             </li>
           </ul>
@@ -47,7 +47,7 @@ export default function Footer() {
       </div>
 
       <div className="container site-footer__base">
-        <span>© {year} {siteConfig.legal.entityName}. All rights reserved.</span>
+        <span>© {year} {siteConfig.legal.entityName}. 無断複写・転載を禁じます。</span>
         <span className="site-footer__kanji" aria-hidden="true">{siteConfig.brand.kanji}</span>
       </div>
     </footer>
